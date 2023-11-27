@@ -38,7 +38,6 @@ const handleBold = (
     return EditorState.forceSelection(newEditorState, blockSelection);
 };
 
-// Example Usage
 const exampleEditorState = EditorState.createEmpty();
 
 const selectionState = SelectionState.createEmpty("blockKey");

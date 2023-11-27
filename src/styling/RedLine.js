@@ -38,7 +38,6 @@ const handleRed = (
     return EditorState.forceSelection(newEditorState, blockSelection);
 };
 
-// Example Usage
 const exampleEditorState = EditorState.createEmpty();
 
 const selectionState = SelectionState.createEmpty("blockKey");
@@ -55,5 +54,3 @@ const updatedEditorState = handleRed(
     blockKey,
     exampleEditorState
 );
-
-  // Now 'updatedEditorState' contains the modified EditorState

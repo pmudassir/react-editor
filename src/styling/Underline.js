@@ -38,7 +38,6 @@ const handleUnderline = (
     return EditorState.forceSelection(newEditorState, blockSelection);
 };
 
-// Example Usage
 const exampleEditorState = EditorState.createEmpty();
 
 const selectionState = SelectionState.createEmpty("blockKey");
@@ -55,5 +54,3 @@ const updatedEditorState = handleUnderline(
     blockKey,
     exampleEditorState
 );
-
-  // Now 'updatedEditorState' contains the modified EditorState
