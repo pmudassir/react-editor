@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ContentBlock, Editor, EditorState, convertFromRaw, convertToRaw } from "draft-js";
-import { handleHeading } from "./utils/headerLogic";
-import { handleUnderline } from "./utils/underlineLogic";
-import { handleRed } from "./utils/redLogic";
-import { handleBold } from "./utils/boldLogic";
-import "./App.css";
+import { Editor, EditorState, convertFromRaw, convertToRaw } from "draft-js";
+import { handleUnderline } from "../styling/Underline";
+import { handleRed } from "../styling/RedLine";
+import { handleBold } from "../styling/Bold";
+import "./editor.css";
+import { handleHeading } from "../styling/Header";
 
 export const MyEditor = () => {
     const [editorState, setEditorState] = useState(() => EditorState.createEmpty());
@@ -103,7 +103,7 @@ export const MyEditor = () => {
         <div className="container">
             <div className="titleBar">
                 <span></span>
-                <p>Demo editor by Ishan Jaiswal</p>
+                <p>Demo editor by Mudassir Mohammed</p>
                 <button onClick={handleSave}>Save</button>
             </div>
             <div

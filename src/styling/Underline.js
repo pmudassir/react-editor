@@ -1,11 +1,8 @@
 import {
     EditorState,
-    ContentBlock,
-    ContentState,
-    SelectionState,
 } from "draft-js";
 
-const handleUnderline = (
+export const handleUnderline = (
     selectionState,
     contentState,
     block,
@@ -37,20 +34,3 @@ const handleUnderline = (
 
     return EditorState.forceSelection(newEditorState, blockSelection);
 };
-
-const exampleEditorState = EditorState.createEmpty();
-
-const selectionState = SelectionState.createEmpty("blockKey");
-const contentState = ContentState.createFromText("Example Text");
-const block = new ContentBlock({});
-const text = "Example Underlined Text";
-const blockKey = "blockKey";
-
-const updatedEditorState = handleUnderline(
-    selectionState,
-    contentState,
-    block,
-    text,
-    blockKey,
-    exampleEditorState
-);

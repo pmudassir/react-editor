@@ -1,11 +1,8 @@
 import {
     EditorState,
-    ContentBlock,
-    ContentState,
-    SelectionState,
 } from "draft-js";
 
-const handleRed = (
+export const handleRed = (
     selectionState,
     contentState,
     block,
@@ -37,20 +34,3 @@ const handleRed = (
 
     return EditorState.forceSelection(newEditorState, blockSelection);
 };
-
-const exampleEditorState = EditorState.createEmpty();
-
-const selectionState = SelectionState.createEmpty("blockKey");
-const contentState = ContentState.createFromText("Example Text");
-const block = new ContentBlock({});
-const text = "Example Red Text";
-const blockKey = "blockKey";
-
-const updatedEditorState = handleRed(
-    selectionState,
-    contentState,
-    block,
-    text,
-    blockKey,
-    exampleEditorState
-);
